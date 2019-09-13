@@ -3,7 +3,6 @@
 //  CleanSwiftExampleTests
 //
 //  Created by Renan Trapp Silva on 13/09/19.
-//  Copyright © 2019 Santander Empresas. All rights reserved.
 //
 
 import XCTest
