@@ -8,7 +8,6 @@ before_install:
   - rvm use $RVM_RUBY_VERSION
 install: 
  - gem install slather 
- - stage: build
  - bundle install --without=documentation --path ../travis_bundle_dir
 after_success: 
  - slather coverage -s
