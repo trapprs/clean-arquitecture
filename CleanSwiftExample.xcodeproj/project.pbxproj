@@ -104,6 +104,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DA19045C233D2D6500F06DBF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DAE33E85232ACB5A00A42AD1 /* Payment */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		DAE33E41232A7D8400A42AD1 = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DA190456233D18C900F06DBF /* Utils */,
-				DAE33E85232ACB5A00A42AD1 /* Payment */,
+				DA19045C233D2D6500F06DBF /* Features */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
