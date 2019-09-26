@@ -14,9 +14,9 @@ protocol ExempleFeatureDisplay: AnyObject {
 
 final class ExempleFeatureViewController: UIViewController {
     private var interactor: ExempleFeatureInteractorProtocol?
-    private var router: ExempleFeatureRouterProtocol?
+    private var router: Router?
     
-    init(router: ExempleFeatureRouterProtocol) {
+    init(router: Router) {
         self.router = router
         
         super.init(nibName: "ExempleFeatureViewController", bundle: nil)
@@ -31,17 +31,30 @@ final class ExempleFeatureViewController: UIViewController {
         
         interactor?.getInfo()
     }
+    
+    @IBAction private func buttomNextTapped(_ sender: UIButton) {
+        router?.openNextViewController(with: PaymentModule.sceneTwo)
+    }
 }
 
 // MARK: - ExempleFeatureDisplay
 extension ExempleFeatureViewController: ExempleFeatureDisplay {
     func displayInfo(object: [String]) {
-        if let vc = router?.openNextVC() {
-            present(vc, animated: true)
-        }
+       print(object)
     }
     
     func setInteractor(_ interactor: ExempleFeatureInteractorProtocol) {
         self.interactor = interactor
     }
 }
+
+// MARK: - extension for tests
+#if DEBUG
+extension ExempleFeatureViewController {
+    func testPrivateMethods(_ sender: UIButton) {
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            buttomNextTapped(sender)
+        }
+    }
+}
+#endif

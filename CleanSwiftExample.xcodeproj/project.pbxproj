@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA19044F23326E3000F06DBF /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19044E23326E3000F06DBF /* TestStoryboard.storyboard */; };
+		DA19045123326E5700F06DBF /* TestStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045023326E5700F06DBF /* TestStoryboardViewController.swift */; };
+		DA19045323326ED300F06DBF /* TestStoryboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045223326ED300F06DBF /* TestStoryboardInteractor.swift */; };
+		DA190458233D18D500F06DBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA190457233D18D500F06DBF /* Router.swift */; };
+		DA19045B233D2A2D00F06DBF /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045A233D2A2D00F06DBF /* RouterTests.swift */; };
 		DAE33E4E232A7D8400A42AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E4D232A7D8400A42AD1 /* AppDelegate.swift */; };
 		DAE33E55232A7D8600A42AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE33E54232A7D8600A42AD1 /* Assets.xcassets */; };
 		DAE33E58232A7D8600A42AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE33E56232A7D8600A42AD1 /* LaunchScreen.storyboard */; };
@@ -32,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA19044E23326E3000F06DBF /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
+		DA19045023326E5700F06DBF /* TestStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStoryboardViewController.swift; sourceTree = "<group>"; };
+		DA19045223326ED300F06DBF /* TestStoryboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStoryboardInteractor.swift; sourceTree = "<group>"; };
+		DA190457233D18D500F06DBF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DA19045A233D2A2D00F06DBF /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		DAE33E4A232A7D8400A42AD1 /* CleanSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE33E4D232A7D8400A42AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE33E54232A7D8600A42AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA19044D23326E0D00F06DBF /* Scene2 */ = {
+			isa = PBXGroup;
+			children = (
+				DA19044E23326E3000F06DBF /* TestStoryboard.storyboard */,
+				DA19045023326E5700F06DBF /* TestStoryboardViewController.swift */,
+				DA19045223326ED300F06DBF /* TestStoryboardInteractor.swift */,
+			);
+			path = Scene2;
+			sourceTree = "<group>";
+		};
+		DA190456233D18C900F06DBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DA190457233D18D500F06DBF /* Router.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DA190459233D2A1C00F06DBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DA19045A233D2A2D00F06DBF /* RouterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		DAE33E41232A7D8400A42AD1 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +134,7 @@
 		DAE33E61232A7D8600A42AD1 /* CleanSwiftExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA190459233D2A1C00F06DBF /* Utils */,
 				DAE33E72232A7E7D00A42AD1 /* Scenes */,
 				DAE33E64232A7D8600A42AD1 /* Info.plist */,
 			);
@@ -118,6 +155,7 @@
 		DAE33E6E232A7DD100A42AD1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DA190456233D18C900F06DBF /* Utils */,
 				DAE33E85232ACB5A00A42AD1 /* Payment */,
 			);
 			path = Modules;
@@ -127,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				DAE33E78232A7F0900A42AD1 /* ExempleFeatureViewController.swift */,
-				DAE33E7C232A829700A42AD1 /* ExempleFeatureInteractor.swift */,
 				DAE33E7E232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift */,
+				DAE33E7C232A829700A42AD1 /* ExempleFeatureInteractor.swift */,
 				DAE33E79232A7F0900A42AD1 /* ExempleFeatureViewController.xib */,
 			);
 			path = ExempleFeature;
@@ -174,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE33E71232A7E6700A42AD1 /* ExempleFeature */,
+				DA19044D23326E0D00F06DBF /* Scene2 */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -260,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE33E7B232A7F0900A42AD1 /* ExempleFeatureViewController.xib in Resources */,
+				DA19044F23326E3000F06DBF /* TestStoryboard.storyboard in Resources */,
 				DAE33E58232A7D8600A42AD1 /* LaunchScreen.storyboard in Resources */,
 				DAE33E55232A7D8600A42AD1 /* Assets.xcassets in Resources */,
 			);
@@ -281,9 +321,12 @@
 			files = (
 				DAE33E81232AAEB100A42AD1 /* ExempleFeatureRouter.swift in Sources */,
 				DAE33E7F232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift in Sources */,
+				DA190458233D18D500F06DBF /* Router.swift in Sources */,
 				DAE33E7D232A829700A42AD1 /* ExempleFeatureInteractor.swift in Sources */,
 				DAE33E84232AB12200A42AD1 /* ExampleFeatureService.swift in Sources */,
 				DAE33E7A232A7F0900A42AD1 /* ExempleFeatureViewController.swift in Sources */,
+				DA19045323326ED300F06DBF /* TestStoryboardInteractor.swift in Sources */,
+				DA19045123326E5700F06DBF /* TestStoryboardViewController.swift in Sources */,
 				DAE33E4E232A7D8400A42AD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA19045B233D2A2D00F06DBF /* RouterTests.swift in Sources */,
 				DAE33E8F232C15DC00A42AD1 /* ExempleFeaturePresenterTests.swift in Sources */,
 				DAE33E8D232BFE4900A42AD1 /* ExempleFeatureInteractorTests.swift in Sources */,
 				DAE33E75232A7EA900A42AD1 /* ExempleFeatureViewControllerTest.swift in Sources */,

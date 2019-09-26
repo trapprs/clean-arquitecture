@@ -7,26 +7,29 @@
 
 import UIKit
 
-protocol ExempleFeatureRouterProtocol {
-    func startRouter() -> UIViewController
-    func openNextVC() -> UIViewController
-}
-
-final class ExempleFeatureRouter: ExempleFeatureRouterProtocol {
-    func startRouter() -> UIViewController {
-        let router = self
-        let view = ExempleFeatureViewController(router: router)
-        let service = ExempleFeatureService()
-        let interactor = ExempleFeatureInteractor(service: service)
-        view.setInteractor(interactor)
-        let presenter = ExempleFeaturePresenter(view: view)
-        interactor.setPresenter(presenter: presenter)
+enum PaymentModule: RouterActionProtocol {
+    case sceneOne
+    case sceneTwo
     
-        return view
-    }
-    
-    func openNextVC() -> UIViewController {
-        return UIViewController()
+    func openViewController(in router: Router) -> UIViewController {
+        switch self {
+        case .sceneOne:
+            let view = ExempleFeatureViewController(router: router)
+            let service = ExempleFeatureService()
+            let interactor = ExempleFeatureInteractor(service: service)
+            view.setInteractor(interactor)
+            let presenter = ExempleFeaturePresenter(view: view)
+            interactor.setPresenter(presenter: presenter)
+            
+            return view
+        case .sceneTwo:
+            let storyboard = UIStoryboard(name: "TestStoryboard", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "TestStoryboardViewController") as! TestStoryboardViewController
+            let interactor = TestStoryboardInteractor()
+            destinationVC.set(router: router)
+            destinationVC.set(interactor: interactor)
+            
+            return destinationVC
+        }
     }
 }
-

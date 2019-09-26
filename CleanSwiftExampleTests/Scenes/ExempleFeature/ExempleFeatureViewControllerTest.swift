@@ -12,11 +12,12 @@ class ExempleFeatureViewControllerTest: XCTestCase {
     var viewController: ExempleFeatureViewController!
     private var interactor: ExempleFeatureInteractorSpy!
     private var presenter: ExempleFeaturePresenterSpy!
-    private var router: Router!
+    private var router: RouterSpy!
     
     override func setUp() {
         super.setUp()
-        self.router = Router()
+        self.router = RouterSpy(navigation: UINavigationController(), routerModule: RouterStructTest())
+        
         self.viewController = ExempleFeatureViewController(router: router)
         self.interactor = ExempleFeatureInteractorSpy()
         self.presenter = ExempleFeaturePresenterSpy()
@@ -34,8 +35,6 @@ class ExempleFeatureViewControllerTest: XCTestCase {
         viewController.setInteractor(interactor)
         
         viewController.displayInfo(object: ["test"])
-        
-        XCTAssert(router.shouldPassRouter)
     }
     
     func testPresenter() {
@@ -47,6 +46,14 @@ class ExempleFeatureViewControllerTest: XCTestCase {
     func testFailureView() {
         let v = ExempleFeatureViewController(coder: NSCoder())
         XCTAssertNil(v, "Error")
+    }
+    
+    func testIBOutletPrivate() {
+        viewController.testPrivateMethods(UIButton(frame: .zero))
+        
+        router.openNextViewController(with: RouterStructTest())
+        XCTAssert(router.shouldPassToNextVC)
+        
     }
     
     override func tearDown() {
@@ -72,14 +79,34 @@ private class ExempleFeaturePresenterSpy: ExempleFeaturePresenterProtocol {
     }
 }
 
-private class Router: ExempleFeatureRouterProtocol {
-    var shouldPassRouter = false
-    func startRouter() -> UIViewController {
-        return UIViewController()
+private class RouterSpy: Router {
+    var shouldPassToNextVC = false
+    var shouldStart = false
+    var shouldExit = false
+    
+    func start() {
+        shouldStart = true
     }
     
-    func openNextVC() -> UIViewController {
-        shouldPassRouter = true
+    required init(navigation: UINavigationController?, routerModule: RouterActionProtocol) {
+        
+    }
+    
+    func openNextViewController(with sceneName: RouterActionProtocol) {
+        shouldPassToNextVC = true
+    }
+    
+    func exitRouter() {
+        shouldExit = true
+    }
+}
+
+private class RouterStructTest: RouterActionProtocol {
+    var shouldOpenVC = false
+    
+    func openViewController(in router: Router) -> UIViewController {
+        shouldOpenVC = true
+        
         return UIViewController()
     }
 }
