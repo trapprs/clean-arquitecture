@@ -8,34 +8,35 @@
 import UIKit
 
 protocol Router {
-    init(navigation: UINavigationController?, routerModule: RouterActionProtocol)
+    init(routerModule: RouterActionProtocol)
     func start()
-    func openNextViewController(with sceneName: RouterActionProtocol)
+    func openNextViewController(with sceneName: ModuleScenes)
     func exitRouter()
 }
 
 protocol RouterActionProtocol {
-    func openViewController(in router: Router) -> UIViewController
+    var moduleScenes: ModuleScenes? { get }
+    func start(router: Router)
+    func openViewController(in router: Router, moduleScenes: ModuleScenes)
 }
 
 final class RouterModules: Router {
-    private var navigation: UINavigationController?
-    private var routerModule: RouterActionProtocol
+    private var viewController: UIViewController?
+    private var routerModule: RouterActionProtocol?
     
-    init(navigation: UINavigationController? = nil, routerModule: RouterActionProtocol) {
-        self.navigation = navigation
+    init(routerModule: RouterActionProtocol) {
         self.routerModule = routerModule
     }
     
     func start() {
-        navigation?.pushViewController(routerModule.openViewController(in: self), animated: true)
+        routerModule?.start(router: self)
     }
     
-    func openNextViewController(with sceneName: RouterActionProtocol) {
-        navigation?.pushViewController(sceneName.openViewController(in: self), animated: true)
+    func openNextViewController(with sceneName: ModuleScenes) {
+        routerModule?.openViewController(in: self, moduleScenes: sceneName)
     }
     
     func exitRouter() {
-        navigation?.popToRootViewController(animated: true)
+        
     }
 }

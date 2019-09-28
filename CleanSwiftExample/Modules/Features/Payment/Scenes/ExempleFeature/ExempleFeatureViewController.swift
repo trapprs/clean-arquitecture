@@ -33,7 +33,7 @@ final class ExempleFeatureViewController: UIViewController {
     }
     
     @IBAction private func buttomNextTapped(_ sender: UIButton) {
-        router?.openNextViewController(with: PaymentModule.sceneTwo)
+        router?.openNextViewController(with: PaymentModule.Scenes.sceneTwo)
     }
 }
 

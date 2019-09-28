@@ -22,13 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func startRouter() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController()
+        
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
-            let router = RouterModules(navigation: navigationController, routerModule: PaymentModule.sceneOne)
+            let paymentModule: RouterActionProtocol = PaymentModule()
+            
+            let router = RouterModules(routerModule: paymentModule)
+            
             router.start()
         }
         
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        
     }
 }
