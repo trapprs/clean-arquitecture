@@ -24,11 +24,7 @@ extension AppDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
-            let paymentModule: RouterActionProtocol = PaymentModule()
-            
-            let router = RouterModules(routerModule: paymentModule)
-            
-            router.start()
+            FlowModules(flowModule: PaymentModule()).start()
         }
         
         

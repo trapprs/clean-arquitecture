@@ -10,12 +10,12 @@ import UIKit
 
 protocol TestStoryboardViewDisplay: AnyObject {
     func set(interactor: TestStoryboardInteractorProtocol)
-    func set(router: Router)
+    func set(flow: Flow)
 }
 
 final class TestStoryboardViewController: UIViewController {
     private var interactor: TestStoryboardInteractorProtocol?
-    private var router: Router?
+    private var flow: Flow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ extension TestStoryboardViewController: TestStoryboardViewDisplay {
         self.interactor = interactor
     }
     
-    func set(router: Router) {
-        self.router = router
+    func set(flow: Flow) {
+        self.flow = flow
     }
 }

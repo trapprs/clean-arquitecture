@@ -10,7 +10,7 @@
 		DA19044F23326E3000F06DBF /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19044E23326E3000F06DBF /* TestStoryboard.storyboard */; };
 		DA19045123326E5700F06DBF /* TestStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045023326E5700F06DBF /* TestStoryboardViewController.swift */; };
 		DA19045323326ED300F06DBF /* TestStoryboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045223326ED300F06DBF /* TestStoryboardInteractor.swift */; };
-		DA190458233D18D500F06DBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA190457233D18D500F06DBF /* Router.swift */; };
+		DA190458233D18D500F06DBF /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA190457233D18D500F06DBF /* Flow.swift */; };
 		DA19045B233D2A2D00F06DBF /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19045A233D2A2D00F06DBF /* RouterTests.swift */; };
 		DAE33E4E232A7D8400A42AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E4D232A7D8400A42AD1 /* AppDelegate.swift */; };
 		DAE33E55232A7D8600A42AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE33E54232A7D8600A42AD1 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		DAE33E7B232A7F0900A42AD1 /* ExempleFeatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE33E79232A7F0900A42AD1 /* ExempleFeatureViewController.xib */; };
 		DAE33E7D232A829700A42AD1 /* ExempleFeatureInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E7C232A829700A42AD1 /* ExempleFeatureInteractor.swift */; };
 		DAE33E7F232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E7E232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift */; };
-		DAE33E81232AAEB100A42AD1 /* ExempleFeatureRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E80232AAEB100A42AD1 /* ExempleFeatureRouter.swift */; };
+		DAE33E81232AAEB100A42AD1 /* ExempleFeatureFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E80232AAEB100A42AD1 /* ExempleFeatureFlow.swift */; };
 		DAE33E84232AB12200A42AD1 /* ExampleFeatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E83232AB12200A42AD1 /* ExampleFeatureService.swift */; };
 		DAE33E8D232BFE4900A42AD1 /* ExempleFeatureInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E8C232BFE4900A42AD1 /* ExempleFeatureInteractorTests.swift */; };
 		DAE33E8F232C15DC00A42AD1 /* ExempleFeaturePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE33E8E232C15DC00A42AD1 /* ExempleFeaturePresenterTests.swift */; };
@@ -40,7 +40,7 @@
 		DA19044E23326E3000F06DBF /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		DA19045023326E5700F06DBF /* TestStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStoryboardViewController.swift; sourceTree = "<group>"; };
 		DA19045223326ED300F06DBF /* TestStoryboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStoryboardInteractor.swift; sourceTree = "<group>"; };
-		DA190457233D18D500F06DBF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DA190457233D18D500F06DBF /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		DA19045A233D2A2D00F06DBF /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		DAE33E4A232A7D8400A42AD1 /* CleanSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE33E4D232A7D8400A42AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		DAE33E79232A7F0900A42AD1 /* ExempleFeatureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExempleFeatureViewController.xib; sourceTree = "<group>"; };
 		DAE33E7C232A829700A42AD1 /* ExempleFeatureInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeatureInteractor.swift; sourceTree = "<group>"; };
 		DAE33E7E232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeaturePresenter.swift; sourceTree = "<group>"; };
-		DAE33E80232AAEB100A42AD1 /* ExempleFeatureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeatureRouter.swift; sourceTree = "<group>"; };
+		DAE33E80232AAEB100A42AD1 /* ExempleFeatureFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeatureFlow.swift; sourceTree = "<group>"; };
 		DAE33E83232AB12200A42AD1 /* ExampleFeatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleFeatureService.swift; sourceTree = "<group>"; };
 		DAE33E8C232BFE4900A42AD1 /* ExempleFeatureInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeatureInteractorTests.swift; sourceTree = "<group>"; };
 		DAE33E8E232C15DC00A42AD1 /* ExempleFeaturePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleFeaturePresenterTests.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		DA190456233D18C900F06DBF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DA190457233D18D500F06DBF /* Router.swift */,
+				DA190457233D18D500F06DBF /* Flow.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 		DAE33E85232ACB5A00A42AD1 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
-				DAE33E80232AAEB100A42AD1 /* ExempleFeatureRouter.swift */,
+				DAE33E80232AAEB100A42AD1 /* ExempleFeatureFlow.swift */,
 				DAE33E88232BFAC400A42AD1 /* Services */,
 				DAE33E89232BFB0D00A42AD1 /* Scenes */,
 			);
@@ -327,9 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE33E81232AAEB100A42AD1 /* ExempleFeatureRouter.swift in Sources */,
+				DAE33E81232AAEB100A42AD1 /* ExempleFeatureFlow.swift in Sources */,
 				DAE33E7F232AAD1E00A42AD1 /* ExempleFeaturePresenter.swift in Sources */,
-				DA190458233D18D500F06DBF /* Router.swift in Sources */,
+				DA190458233D18D500F06DBF /* Flow.swift in Sources */,
 				DAE33E7D232A829700A42AD1 /* ExempleFeatureInteractor.swift in Sources */,
 				DAE33E84232AB12200A42AD1 /* ExampleFeatureService.swift in Sources */,
 				DAE33E7A232A7F0900A42AD1 /* ExempleFeatureViewController.swift in Sources */,
@@ -493,15 +493,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8TS8BA223V;
+				DEVELOPMENT_TEAM = 95WF9DSUCR;
 				INFOPLIST_FILE = "$(SRCROOT)/CleanSwiftExample/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.trapprs.CleanSwiftExample;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.trapprs.CleanSwiftExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,15 +512,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8TS8BA223V;
+				DEVELOPMENT_TEAM = 95WF9DSUCR;
 				INFOPLIST_FILE = "$(SRCROOT)/CleanSwiftExample/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.trapprs.CleanSwiftExample;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.trapprs.CleanSwiftExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

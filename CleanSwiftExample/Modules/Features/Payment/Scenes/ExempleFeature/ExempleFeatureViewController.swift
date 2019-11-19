@@ -14,10 +14,10 @@ protocol ExempleFeatureDisplay: AnyObject {
 
 final class ExempleFeatureViewController: UIViewController {
     private var interactor: ExempleFeatureInteractorProtocol?
-    private var router: Router?
+    private var flow: Flow?
     
-    init(router: Router) {
-        self.router = router
+    init(flow: Flow) {
+        self.flow = flow
         
         super.init(nibName: "ExempleFeatureViewController", bundle: nil)
     }
@@ -33,7 +33,7 @@ final class ExempleFeatureViewController: UIViewController {
     }
     
     @IBAction private func buttomNextTapped(_ sender: UIButton) {
-        router?.openNextViewController(with: PaymentModule.Scenes.sceneTwo)
+        flow?.openNextViewController(with: Scenes.Payment.sceneTwo)
     }
 }
 
