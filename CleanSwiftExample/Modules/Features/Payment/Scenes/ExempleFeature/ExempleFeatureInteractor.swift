@@ -12,7 +12,7 @@ protocol ExempleFeatureInteractorProtocol {
     func getInfo()
 }
 
-class ExempleFeatureInteractor: ExempleFeatureInteractorProtocol {
+final class ExempleFeatureInteractor: ExempleFeatureInteractorProtocol {
     private var service: ExempleFeatureServiceProtocol?
     private var presenter: ExempleFeaturePresenterProtocol?
     

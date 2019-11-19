@@ -1,0 +1,6 @@
+# .slather.yml
+
+coverage_service: coveralls
+xcodeproj: 'CleanSwiftExample.xcodeproj'
+scheme: 'CleanSwiftExample' 
+output_directory: ./test-reports

@@ -16,3 +16,9 @@ class ExempleFeatureService: ExempleFeatureServiceProtocol {
         completion(["teste", "test2"])
     }
 }
+
+class ExempleFeatureService2: ExempleFeatureServiceProtocol {
+    func getObjects(completion: @escaping ([String]) -> Void) {
+        completion(["teste222", "test2"])
+    }
+}

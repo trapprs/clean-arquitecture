@@ -14,10 +14,10 @@ protocol ExempleFeatureDisplay: AnyObject {
 
 final class ExempleFeatureViewController: UIViewController {
     private var interactor: ExempleFeatureInteractorProtocol?
-    private var router: ExempleFeatureRouterProtocol?
+    private var flow: Flow?
     
-    init(router: ExempleFeatureRouterProtocol) {
-        self.router = router
+    init(flow: Flow) {
+        self.flow = flow
         
         super.init(nibName: "ExempleFeatureViewController", bundle: nil)
     }
@@ -31,17 +31,30 @@ final class ExempleFeatureViewController: UIViewController {
         
         interactor?.getInfo()
     }
+    
+    @IBAction private func buttomNextTapped(_ sender: UIButton) {
+        flow?.openNextViewController(with: Scenes.Payment.sceneTwo)
+    }
 }
 
 // MARK: - ExempleFeatureDisplay
 extension ExempleFeatureViewController: ExempleFeatureDisplay {
     func displayInfo(object: [String]) {
-        if let vc = router?.openNextVC() {
-            present(vc, animated: true)
-        }
+       print(object)
     }
     
     func setInteractor(_ interactor: ExempleFeatureInteractorProtocol) {
         self.interactor = interactor
     }
 }
+
+// MARK: - extension for tests
+#if DEBUG
+extension ExempleFeatureViewController {
+    func testPrivateMethods(_ sender: UIButton) {
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            buttomNextTapped(sender)
+        }
+    }
+}
+#endif
